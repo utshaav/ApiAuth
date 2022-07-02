@@ -18,7 +18,7 @@ namespace ApiAuth.Services
             new Claim(ClaimTypes.Name, "SimpleApiUser")
             };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Global.SecretKey));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Global.SecretKey!));
             var credential = new SigningCredentials(key, SecurityAlgorithms.HmacSha512);
             SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
             {

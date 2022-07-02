@@ -26,6 +26,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
+//We can use Token service as normal class as well, but I used it as a Dependency Injection
 builder.Services.AddScoped<TokenService>();
 
 var app = builder.Build();
