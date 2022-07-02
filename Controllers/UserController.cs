@@ -17,7 +17,7 @@ namespace ApiAuth.Controllers
             _tokenService = tokenService;
             
         }
-        [HttpGet("getToken")]
+        [HttpGet("GenerateToken")]
         public IActionResult GetToken()
         {
             var token = _tokenService.CreateToken();
